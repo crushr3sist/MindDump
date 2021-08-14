@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+        <title>blog</title>
+    </head>
+    <body style="background-color: #D291BC;">
+        <a href='/blogCreate'><button method='GET' style=' font-size: 25px; margin-top: 10%; margin-left: 25%; margin-right: 50%; width: 50%; background: #76C48E;' type="button" class="btn ">Create</button></a>>
+        {% for blogs in Blog %}
+            <div class="card" style="margin-bottom: 20px; margin-left: 25%; margin-right: 25%; margin-top: 20px; text-align: center; width: 50%;">
+                <div class="card-body">
+                    <h4 class="card-title">{{blogs.blogTitle}}</h4>
+                    <h6 class="card-subtitle mb-2 text-muted">{{blogs.UsersName}}</h6>
+                    <p class="card-text">{{blogs.blogBody}}</p>
+                </div>
+            </div>
+        {% endfor %}
+    </body>
+</html>

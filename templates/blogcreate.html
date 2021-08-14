@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+        <title>blog</title>
+    </head>
+    <body>
+        <div class="card" style='margin-left: 10%; margin-right: 10%; margin-top: 5%; '>
+            <div class="card-body">
+                <form class="form-group" method="POST">
+                    {{ form.csrf_token }}
+                    <div class="form-group"style='padding-bottom: 20px;'>
+                        <label>Enter Name</label>
+                        {{ form.UsersName (class_='form-control',placeholder="John Doe") }}
+                
+                    </div>
+                    <div class="form-group"style='padding-bottom: 20px;'>
+                        <label>Enter Title</label>
+                        {{ form.blogTitle (class_='form-control',placeholder="Dear Diary") }}
+                    </div>
+                    <div class="form-group" style='padding-bottom: 20px;'>
+                        <label for="exampleFormControlTextarea1">Enter Your Blog</label>
+                        {{ form.blogBody (class_='form-control',placeholder="So today somthing crazy happened...") }}
+                    </div>
+                    <button type="submit" style="position: relative; text-align:center; margin-right: 55%; width: 50%;" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
+
