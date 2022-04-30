@@ -17,7 +17,9 @@ def index():
         UsersName: Literal[str] = request.form["UsersName"]
         blogTitle: Literal[str] = request.form["blogTitle"]
         blogBody: Literal[str] = request.form["blogBody"]
-        bloginsert: Literal[str] = BlogModel(str(UsersName), str(blogTitle), str(blogBody))
+        bloginsert: Literal[str] = BlogModel(
+            str(UsersName), str(blogTitle), str(blogBody)
+        )
         db.session.add(bloginsert)
         db.session.commit()
         return redirect("/")
